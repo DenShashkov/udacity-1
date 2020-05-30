@@ -6,13 +6,12 @@ body {
   margin: 0px;
 }
 
-.main-navbar-stretch {
+/* Smartphones */
+
+.main-navbar-stretch-left, .main-navbar-stretch-right, .main-posts-stretch-left, .main-posts-stretch-right {
   display:none;
 }
 
-.main-posts-stretch {
-  display:none;
-}
 
 .container {
   display: grid;
@@ -71,8 +70,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  justify-content: center;
   align-items: center;
 }
 
@@ -150,18 +147,23 @@ body {
   font-size: 0.8rem;
 }
 
+.footer {
+  background-color: #2E3D49;
+  height: 60px;
+  margin: 0px;
+}
+
 .subscribe {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #2E3D49;
   list-style-type: none;
-  height: 60px;
-  margin: 0px;
+  justify-content: center;
+  align-items: center;
   font-family: "Verdana", "Tahoma", "Arial";
   font-size: 0.8em;
   color: #F9F9FA;
+  height: 60px;
+  margin: 0px;
 }
 
 .subscribe-form {
@@ -171,4 +173,213 @@ body {
 
 .copyright {
   font-size: 0.8em;
+}
+
+/* Tablets and small screens */
+
+@media (min-width: 480px) and (max-width:950px) {
+
+  .container {
+    display: grid;
+    gap: 0px 0px;
+    grid-template-rows: 10vh 25vh auto 10vh;
+    grid-template-columns: 50% 50%;
+    align-items: flex-start;
+    grid-template-areas:
+    "nv sc"
+    "pc pc"
+    "tx tx"
+    "ft ft";
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .main-social-items {
+    display: flex;
+    grid-area: sc;
+    height: 10vh;
+    justify-content: flex-end;
+  }
+
+  .header-image {
+    width: 25px;
+    height: 25px;
+    margin: 2vw;
+  }
+
+  .main-navbar {
+    grid-area: nv;
+  }
+
+  .main-navbar-items {
+    height: 10vh;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar-item {
+    margin: 2vw;
+    font-size: 1em;
+  }
+
+  .main-postcard {
+    height: 25vh;
+    grid-area: pc;
+    background-image: url("../img/main-image-large.jpg");
+    background-size: cover;
+  }
+
+  .main-posts {
+    grid-area: tx;
+    height: 100%;
+  }
+
+  .footer {
+    grid-area: ft;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .post-wrap {
+    display: grid;
+    grid-template-rows: 2rem 3.6rem 1rem;
+    grid-template-columns: 6.1rem auto auto auto;
+    grid-template-areas:
+    "im hd hd dt"
+    "im tx tx tx"
+    "im mr mr mr";
+    width: 90%;
+    height: 8.1rem;
+    align-items: center;
+    margin-top: 2em;
+  }
+
+  .post-image {
+    height: 6rem;
+    width: 6rem;
+    border-radius:6rem;
+  }
+
+  .post-text-slot {
+    margin-left: 10px;
+  }
+
+  .post-headline-slot {
+    margin-left: 10px;
+  }
+}
+
+/* Bigger screens */
+
+@media (min-width:951px) {
+
+  .container {
+    display: grid;
+    gap: 0px 0px;
+    grid-template-rows: 10vh 25vh auto 10vh;
+    grid-template-columns: auto 600px 351px auto;
+    align-items: flex-start;
+    grid-template-areas:
+    "nl nv sc nr"
+    "pc pc pc pc"
+    "pl tx tx pr"
+    "ft ft ft ft";
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .main-social-items {
+    display: flex;
+    grid-area: sc;
+    height: 10vh;
+    justify-content: flex-end;
+  }
+
+  .header-image {
+    width: 25px;
+    height: 25px;
+    margin: 2vw;
+  }
+
+  .main-navbar-stretch-left {
+    display: flex;
+    grid-area: nl;
+    background-color: #F7F7F8;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-navbar-stretch-right {
+    display: flex;
+    grid-area: nr;
+    background-color: #F7F7F8;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-navbar {
+    grid-area: nv;
+  }
+
+  .main-navbar-items {
+    height: 10vh;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar-item {
+    margin: 2vw;
+    font-size: 1em;
+  }
+
+  .main-postcard {
+    height: 25vh;
+    grid-area: pc;
+    background-image: url("../img/main-image-large.jpg");
+    background-size: cover;
+  }
+
+  .main-posts {
+    grid-area: tx;
+    height: 100%;
+  }
+
+  .footer {
+    grid-area: ft;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .post-wrap {
+    display: grid;
+    grid-template-rows: 2rem 3.6rem 1rem;
+    grid-template-columns: 6.1rem auto auto auto;
+    grid-template-areas:
+    "im hd hd dt"
+    "im tx tx tx"
+    "im mr mr mr";
+    width: 90%;
+    height: 8.1rem;
+    align-items: center;
+    margin-top: 2em;
+  }
+
+  .post-image {
+    height: 6rem;
+    width: 6rem;
+    border-radius:6rem;
+  }
+
+  .post-text-slot {
+    margin-left: 10px;
+  }
+
+  .post-headline-slot {
+    margin-left: 10px;
+  }
+
 }
