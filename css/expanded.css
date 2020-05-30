@@ -1,0 +1,104 @@
+h1 {
+  color: #2E3D49;
+  font-family: "Helvetica", "Georgia", "Arial";
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+h2 {
+  color: #6D7780;
+  font-family: "Helvetica", "Georgia", "Arial";
+  font-size: 0.7em;
+  text-align: right;
+  font-style: italic;
+  margin-right:10px;
+}
+
+.expanded-text {
+  color: #1F2932;
+  font-family: "Verdana", "Tahoma", "Arial";
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.hoian-postcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2E3D49;
+  height: 150px;
+  background-image: url("../img/hoian-image-small.jpg");
+}
+
+.expanded-post-image {
+  width: 60vw;
+}
+
+.image-paragraph {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 480px) and (max-width:950px) {
+
+  .hoian-postcard {
+    height: 25vh;
+    grid-area: pc;
+    background-image: url("../img/hoian-image-large.jpg");
+    background-size: cover;
+  }
+
+  .expanded-post {
+    grid-area: tx;
+    height: 100%;
+  }
+
+  h1 {
+    margin-top: 40px;
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 0.8em;
+  }
+
+  .expanded-text {
+    font-size: 0.9em;
+  }
+
+  .expanded-post-image {
+    width: 50vw;
+  }
+}
+
+@media (min-width:951px) {
+  .hoian-postcard {
+    height: 25vh;
+    grid-area: pc;
+    background-image: url("../img/hoian-image-large.jpg");
+    background-size: cover;
+  }
+  .expanded-post {
+    grid-area: tx;
+    height: 100%;
+  }
+
+  h1 {
+    margin-top: 40px;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 0.9em;
+  }
+
+  .expanded-text {
+    font-size: 1em;
+  }
+
+  .expanded-post-image {
+    width: 480px;
+  }
+}

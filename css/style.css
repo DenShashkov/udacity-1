@@ -45,7 +45,7 @@ body {
   justify-content: center;
   background-color: #2E3D49;
   height: 150px;
-  background-image: url("../img/main-image-small.jpg");
+    background-image: url("../img/main-image-small.jpg");
 }
 
 .main-navbar-items {
