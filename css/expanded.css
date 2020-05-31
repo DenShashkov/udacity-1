@@ -14,6 +14,21 @@ h2 {
   margin-right:10px;
 }
 
+h3 {
+  color: #6D7780;
+  font-family: "Helvetica", "Georgia", "Arial";
+  font-size: 0.5em;
+  text-align: right;
+  font-style: italic;
+  margin-right:10px;
+}
+
+figcaption {
+  color: #1F2932;
+  font-family: "Verdana", "Tahoma", "Arial";
+  font-size: 0.8rem;
+}
+
 .expanded-text {
   color: #1F2932;
   font-family: "Verdana", "Tahoma", "Arial";
@@ -36,7 +51,9 @@ h2 {
 
 .image-paragraph {
   display: flex;
+  flex-flow: column;
   justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 480px) and (max-width:950px) {
