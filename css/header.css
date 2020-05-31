@@ -1,0 +1,43 @@
+.main-social-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  background-color: #F7F7F8;
+  height: 60px;
+}
+
+.header-image {
+  width: 35px;
+  height: 35px;
+}
+
+.main-postcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2E3D49;
+  height: 150px;
+    background-image: url("../img/main-image-small.jpg");
+}
+
+.main-navbar-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #F7F7F8;
+  list-style-type: none;
+  height: 60px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar-item {
+  font-family: "Verdana", "Tahoma", "Arial";
+  font-size: 0.8em;
+  color: #014052;
+}
